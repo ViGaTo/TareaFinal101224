@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="google_client_id" translatable="false" formatted="false">
+        434989655027-m0pn65ju30rq3q95stujnfjqk0rtg0s6.apps.googleusercontent.com
+    </string>
+    <string name = "google_maps_key" translatable="false" formatted="false">
+        AIzaSyBzDJ8e6yeAPZPVdTvKByymxBr0oT_QwBM
+    </string>
+</resources>

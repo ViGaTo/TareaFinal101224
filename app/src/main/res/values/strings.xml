@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TareaFinal101224</string>
+
+    <string name="hint_email">Email...</string>
+    <string name="hint_password">Contraseña...</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="tv_registrar">Registro directo</string>
+    <string name="tv_ubicacion">Nuestra ubicación</string>
+
+    <string name="btn_volver">Volver</string>
+
+    <string name="btn_cerrar_sesion">Cerrar sesión</string>
+    <string name="btn_salir">Salir de la app</string>
+    <string name="btn_web">Navegador web</string>
+
+    <string name="tv_proveedores">Proveedores</string>
+    <string name="btn_nuevo">+ Nuevo</string>
+</resources>
