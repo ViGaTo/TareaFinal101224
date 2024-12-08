@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
     private var email = ""
-    private var contraseña = ""
+    private var contrasena = ""
 
     private lateinit var preferences: Preferences
     private var isAdmin = false
@@ -107,14 +107,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun comprobarCampos(): Boolean {
         email = binding.etEmail.text.toString().trim()
-        contraseña = binding.etContrasena.toString().trim()
+        contrasena = binding.etContrasena.text.toString().trim()
 
         if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             binding.etEmail.error="ERROR. Debe poner un email válido."
             return false
         }
 
-        if(contraseña.length < 8){
+        if(contrasena.length < 8){
             binding.etContrasena.error="ERROR. La contraseña debe tener al menos ocho caracteres"
             return false
         }
@@ -124,7 +124,7 @@ class MainActivity : AppCompatActivity() {
     private fun registrar() {
         if(!comprobarCampos()) return
 
-        auth.createUserWithEmailAndPassword(email, contraseña)
+        auth.createUserWithEmailAndPassword(email, contrasena)
             .addOnCompleteListener {
                 if(it.isSuccessful){
                     login()
@@ -139,7 +139,7 @@ class MainActivity : AppCompatActivity() {
     private fun login() {
         if(!comprobarCampos()) return
 
-        auth.signInWithEmailAndPassword(email, contraseña)
+        auth.signInWithEmailAndPassword(email, contrasena)
             .addOnCompleteListener {
                 if(it.isSuccessful){
                     if(email.equals("admin@admin.es")){

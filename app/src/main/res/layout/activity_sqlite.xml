@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFCCBC"
+    android:background="#FEF9F2"
+    android:padding="5dp"
     tools:context=".SQLiteActivity">
 
     <TextView
@@ -25,24 +26,59 @@
         android:id="@+id/btn_nuevo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
         android:backgroundTint="#2196F3"
         android:text="@string/btn_nuevo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_proveedores"
-        tools:layout_editor_absoluteX="304dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="68dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_proveedores" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="613dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="117dp" />
+        android:id="@+id/recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nuevo" />
+
+    <TextView
+        android:id="@+id/tv_lista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_lista"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btn_portal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="#E91E63"
+        android:text="@string/btn_portal"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_nuevo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_nuevo" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentBoton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_nuevo"
+        app:layout_constraintEnd_toStartOf="@+id/btn_nuevo"
+        app:layout_constraintStart_toEndOf="@+id/btn_portal"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_nuevo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

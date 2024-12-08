@@ -51,7 +51,11 @@ class PortalActivity : AppCompatActivity() {
         }
 
         binding.btnSqlite.setOnClickListener {
+            startActivity(Intent(this, SQLiteActivity::class.java))
+        }
 
+        binding.btnApi.setOnClickListener {
+            startActivity(Intent(this, ApiActivity::class.java))
         }
     }
 

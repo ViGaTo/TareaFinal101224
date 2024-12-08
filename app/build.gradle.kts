@@ -40,6 +40,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.retrofit)
+    implementation(libs.picasso)
+    implementation(libs.converter.gson)
     implementation(libs.androidx.swiperefreshlayout)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.core.ktx)
@@ -48,7 +51,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
-    implementation("com.google.android.gms:play-services-auth:21.2.0")
+    implementation(libs.play.services.auth)
     implementation(libs.play.services.maps)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
