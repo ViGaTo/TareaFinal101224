@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:name=".Aplicacion"
+        android:name=".utils.Aplicacion"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -18,25 +18,28 @@
         android:theme="@style/Theme.TareaFinal101224"
         tools:targetApi="31">
         <activity
-            android:name=".DetalleProductoActivity"
+            android:name=".ui.main.ViewModelActivity"
             android:exported="false" />
         <activity
-            android:name=".ApiActivity"
+            android:name=".ui.main.DetalleProductoActivity"
             android:exported="false" />
         <activity
-            android:name=".DetalleActivity"
+            android:name=".ui.main.ApiActivity"
             android:exported="false" />
         <activity
-            android:name=".FormularioActivity"
+            android:name=".ui.main.DetalleActivity"
             android:exported="false" />
         <activity
-            android:name=".SQLiteActivity"
+            android:name=".ui.main.FormularioActivity"
             android:exported="false" />
         <activity
-            android:name=".WebActivity"
+            android:name=".ui.main.SQLiteActivity"
             android:exported="false" />
         <activity
-            android:name=".PortalActivity"
+            android:name=".ui.main.WebActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.PortalActivity"
             android:exported="false" />
 
         <meta-data
@@ -44,10 +47,10 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapaActivity"
+            android:name=".ui.main.MapaActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
